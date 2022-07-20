@@ -13,16 +13,12 @@ public class City {
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.AUTO)
 	 @Column(name = "cityId")
-	
-
 	private int cityId;
     private String cityName;
     private String cityCap;
+    private int countryId;
     
-    
-//    private String countryId;
-    
-	public City(int cityId, String cityName, String cityCap, String countryId) {
+	public City(Integer cityId, String cityName, String cityCap, int countryId) {
 		super();
 		this.cityId = cityId;
 		this.cityName = cityName;
@@ -30,6 +26,14 @@ public class City {
 //		this.countryId = countryId;
 	}
 	
+	public int getCountryId() {
+		return countryId;
+	}
+
+	public void setCountryId(int countryId) {
+		this.countryId = countryId;
+	}
+
 	public City() {
 		super();
 		// TODO Auto-generated constructor stub

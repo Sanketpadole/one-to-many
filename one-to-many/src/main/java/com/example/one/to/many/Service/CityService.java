@@ -16,6 +16,12 @@ public interface CityService {
 
 	public City updatecity(City city);
 
+	void deleteCourse();
+
+	void deleteCity();
+
+	public void deleteCity(int id);
+
 }
 
 

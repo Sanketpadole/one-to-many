@@ -19,11 +19,26 @@ public class Country {
 	private int countryId;
     private String countryName;
     private String countryCap;
+    private Boolean isActive;
     
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "CountryId",referencedColumnName = "countryId")
-    @JoinColumn(name = "c", referencedColumnName = "countryId")
-  
+    public Country(int countryId, String countryName, String countryCap, Boolean isActive, List<City> city) {
+		super();
+		this.countryId = countryId;
+		this.countryName = countryName;
+		this.countryCap = countryCap;
+		this.isActive = isActive;
+		this.city = city;
+	}
+
+	public Boolean getIsActive() {
+		return isActive;
+	}
+
+	public void setIsActive(Boolean isActive) {
+		this.isActive = isActive;
+	}
+	@OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "CountryId",referencedColumnName = "countryId")  
   private List<City> city;
     
 	public Country(int countryId, String countryName, String countryCap) {
@@ -63,7 +78,8 @@ public class Country {
 	}
 	@Override
 	public String toString() {
-		return "Country [countryId=" + countryId + ", countryName=" + countryName + ", countryCap=" + countryCap + "]";
+		return "Country [countryId=" + countryId + ", countryName=" + countryName + ", countryCap=" + countryCap
+				+ ", isActive=" + isActive + ", city=" + city + "]";
 	}
 	
 

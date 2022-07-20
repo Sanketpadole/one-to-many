@@ -31,6 +31,24 @@ public class CityServiceImpl implements CityService{
 		// TODO Auto-generated method stub
 		return  cityRepository.save(city);
 	}
+	
+	@Override
+	public void deleteCity() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteCourse() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	 public void deleteCity(int id){
+        cityRepository.deleteById(id);
+    }
+
 
 //	@Override
 //	public City addcity(City city) {

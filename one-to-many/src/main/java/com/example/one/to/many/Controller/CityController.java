@@ -43,13 +43,12 @@ public class CityController {
 		return cityService.updatecity(city);
 		
 	}
+	  @DeleteMapping("/{id}")
+	    public void deleteCategory(@PathVariable int id){
+	        cityService.deleteCity(id);
+	    }
 	
-	@DeleteMapping
-	public void deletecity()
-	{
-		
-		
-	}
+	
 }
 
 
