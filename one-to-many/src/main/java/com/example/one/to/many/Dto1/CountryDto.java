@@ -7,6 +7,23 @@ public class CountryDto {
     private String cityCap;
     private String countryName;
     private String countryCap;
+
+	public CountryDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public CountryDto(String cityName, String cityCap, String countryName, String countryCap) {
+		super();
+		this.cityName = cityName;
+		this.cityCap = cityCap;
+		this.countryName = countryName;
+		this.countryCap = countryCap;
+	}
+	@Override
+	public String toString() {
+		return "CountryDto [cityName=" + cityName + ", cityCap=" + cityCap + ", countryName=" + countryName
+				+ ", countryCap=" + countryCap + "]";
+	}
 	public String getCityName() {
 		return cityName;
 	}
@@ -31,7 +48,7 @@ public class CountryDto {
 	public void setCountryCap(String countryCap) {
 		this.countryCap = countryCap;
 	}
-    
+
 
 }
 

@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.one.to.many.Entity.City;
-import com.example.one.to.many.Entity.Country;
 import com.example.one.to.many.Service.CityService;
-import com.example.one.to.many.Service.CountryService;
 @RestController
 @RequestMapping(value = "/city")
 public class CityController {
@@ -25,30 +23,30 @@ public class CityController {
 	public List<City> city(){
 		return cityService.city();
 	}
-	
+
 	@GetMapping("/{id}")
 	public List<City> country(@PathVariable int id){
 		return cityService.city();
 	}
-		
+
 	@PostMapping
 	public City addcity(@RequestBody City city)
 	{
 		return cityService.addcity(city);
 	}
-	
+
 	@PutMapping("/{id}")
 	public City updatecity(@PathVariable int id,@RequestBody City city)
 	{
 		return cityService.updatecity(city);
-		
+
 	}
 	  @DeleteMapping("/{id}")
 	    public void deleteCategory(@PathVariable int id){
 	        cityService.deleteCity(id);
 	    }
-	
-	
+
+
 }
 
 

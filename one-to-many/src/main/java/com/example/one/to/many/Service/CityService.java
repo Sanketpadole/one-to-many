@@ -8,7 +8,7 @@ import com.example.one.to.many.Entity.City;
 
 @Service
 public interface CityService {
-	
+
 
 	public List<City> city();
 

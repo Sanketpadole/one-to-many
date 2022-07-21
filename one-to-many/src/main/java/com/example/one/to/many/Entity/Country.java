@@ -15,12 +15,12 @@ public class Country {
 	   @Id
 	    @GeneratedValue(strategy = GenerationType.AUTO)
 	   @Column(name = "countryId")
-	
+
 	private int countryId;
     private String countryName;
     private String countryCap;
     private Boolean isActive;
-    
+
     public Country(int countryId, String countryName, String countryCap, Boolean isActive, List<City> city) {
 		super();
 		this.countryId = countryId;
@@ -38,16 +38,16 @@ public class Country {
 		this.isActive = isActive;
 	}
 	@OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "CountryId",referencedColumnName = "countryId")  
+    @JoinColumn(name = "CountryId",referencedColumnName = "countryId")
   private List<City> city;
-    
+
 	public Country(int countryId, String countryName, String countryCap) {
 		super();
 		this.countryId = countryId;
 		this.countryName = countryName;
 		this.countryCap = countryCap;
 	}
-	
+
 	public int getCountryId() {
 		return countryId;
 	}
@@ -81,6 +81,6 @@ public class Country {
 		return "Country [countryId=" + countryId + ", countryName=" + countryName + ", countryCap=" + countryCap
 				+ ", isActive=" + isActive + ", city=" + city + "]";
 	}
-	
+
 
 }

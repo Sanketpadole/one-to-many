@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.one.to.many.Entity.City;
-import com.example.one.to.many.Entity.Country;
 import com.example.one.to.many.Repository.CityRepository;
-import com.example.one.to.many.Repository.CountryRepository;
 @Service
 public class CityServiceImpl implements CityService{
 	@Autowired
@@ -31,17 +29,17 @@ public class CityServiceImpl implements CityService{
 		// TODO Auto-generated method stub
 		return  cityRepository.save(city);
 	}
-	
+
 	@Override
 	public void deleteCity() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteCourse() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -56,7 +54,7 @@ public class CityServiceImpl implements CityService{
 //		return null;
 //	}
 
-	
+
 
 }
 
